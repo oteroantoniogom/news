@@ -1,4 +1,4 @@
-# Título del proyecto 📰🔍
+# News Analysis 📰🔍
 
 Análisis de noticias con Newspaper3k 📊📰
 
