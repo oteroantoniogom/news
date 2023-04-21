@@ -4,6 +4,7 @@ from fake_useragent import UserAgent
 
 user_agent = UserAgent()
 
+# Incluir aquí los portales de noticias a analizar. Tener en cuenta que siempre debe haber al menos un "." antes de la web. [www.elmundo.es] --> correcto | [as.com] --> incorrecto
 newspapers = ["https://es.cointelegraph.com/", "https://www.elmundo.es/", "https://www.larazon.es/"]
 
 # Recorrer cada periódico en la lista de periódicos
@@ -31,3 +32,4 @@ for title in newspapers:
     df = pd.DataFrame(lista, columns=["URL", "CONTENIDO"])
     # Guardar el dataframe como un archivo de Excel en la raíz del proyecto con el nombre del dominio del periódico
     df.to_excel(f"{dominio}.xlsx", index=False, encoding="utf-8")
+    print(f"{article.url} analizado.")
