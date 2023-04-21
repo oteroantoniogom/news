@@ -26,10 +26,9 @@ for title in newspapers:
             print(f"Error al descargar o analizar el artículo {article.url}: {str(ex)}")
     # Extraer el dominio del título del periódico
     dominio = title.split(".")[1]
-    print(dominio)
-    print(title)
     # Crear un dataframe de pandas utilizando la lista de datos y especificando el nombre de las columnas
     df = pd.DataFrame(lista, columns=["URL", "CONTENIDO"])
     # Guardar el dataframe como un archivo de Excel en la raíz del proyecto con el nombre del dominio del periódico
     df.to_excel(f"{dominio}.xlsx", index=False, encoding="utf-8")
-    print(f"{article.url} analizado.")
+    print(f"{dominio} analizado.")
+print("Análisis finalizado")
