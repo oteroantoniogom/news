@@ -4,7 +4,7 @@ from fake_useragent import UserAgent
 
 user_agent = UserAgent()
 
-# Incluir aquí los portales de noticias a analizar. Tener en cuenta que siempre debe haber al menos un "." antes de la web. [www.elmundo.es] --> correcto | [as.com] --> incorrecto
+# Incluir aquí los portales de noticias a analizar. Tener en cuenta que siempre debe haber al menos un "." antes de la web. [www.portal.es] --> correcto | [portal.com] --> incorrecto
 newspapers = ["https://portal1.com/", "https://www.portal2.es/", "https://www.portal3.es/"]
 
 # Recorrer cada periódico en la lista de periódicos
